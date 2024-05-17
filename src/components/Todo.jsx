@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Todo() {
+export default function Todo({ todo }) {
     return (
         <li className="flex justify-center mt-2">
             <input type="checkbox" />
-            <p className=" leading-loose px-2 text-white w-40">Hellor From React</p>
+            <p className=" leading-loose px-2 text-white w-40">{todo.title}</p>
             <button className="bg-[#fb654e] text-white font-bold py-1 px-4 rounded hover:bg-purple-700">
                 Edit
             </button>

@@ -1,8 +1,9 @@
-import AddTodo from "./components/AddTodo"
-import Todos from "./components/Todos"
-
+import { useState } from 'react';
+import AddTodo from "./components/AddTodo";
+import Todos from "./components/Todos";
+import { initialData } from "./data/data";
 function App() {
-
+  const [todos, setTodos] = useState(initialData);
   return (
     <>
       <div className="ya-app w-full h-screen flex justify-center items-center">
@@ -16,7 +17,7 @@ function App() {
                 <AddTodo />
               </div>
             </div>
-            <Todos />
+            <Todos todos={todos} />
           </main>
           <footer className="text-center text-lg mt-4">
             <p className="text-gray-500">&copy; 2024 - Present</p>

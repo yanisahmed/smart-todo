@@ -1,11 +1,10 @@
 import React from 'react'
 import Todo from './Todo'
 
-export default function
-    () {
+export default function ({ todos }) {
     return (
         <div className="task_list">
-            <Todo />
+            {todos.map((todo, index) => <Todo key={todo.id} todo={todo} />)}
         </div>
     )
 }
